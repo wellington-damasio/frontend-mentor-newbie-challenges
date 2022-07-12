@@ -6,30 +6,40 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Profile card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  Victor Crest
-  26
-  London
+  <div class="card">
+    <div class="card__header">
+      <img 
+        class="card__img"
+        src="./images/image-victor.jpg" 
+        alt="Profile picture" 
+      />
+    </div>
+    <div class="card__body">
+      <p class="card__name">Vitor Crest <span class="card__age">26</span></p>
+      <p class="card__location">London</p>
+    </div>
+    <div class="card__footer">
+      <div class="card__social">
+        <div class="card__social__info">
+          <p class="card__social__info__number">80K</p>
+          <p class="card__social__info__text">Followers</p>
+        </div>
 
-  80K
-  Followers
+        <div class="card__social__info">
+          <p class="card__social__info__number">803K</p>
+          <p class="card__social__info__text">Likes</p>
+        </div>
 
-  803K
-  Likes
-
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        <div class="card__social__info">
+          <p class="card__social__info__number">1.4K</p>
+          <p class="card__social__info__text">Photos</p>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

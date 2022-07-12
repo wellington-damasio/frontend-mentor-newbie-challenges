@@ -1,0 +1,230 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #f74780;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+body {
+  background-color: #ffffff;
+  background-image: linear-gradient(176deg, #ffffff 0%, #fbf6fd 98%);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
+  margin: 1.5rem auto 2.5rem auto;
+}
+@media only screen and (min-width: 80em) {
+  header {
+    max-width: 80%;
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  background-color: #13183f;
+  padding: 2rem 0;
+}
+footer .footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+@media only screen and (min-width: 80em) {
+  footer .footer-wrapper {
+    width: 80%;
+  }
+}
+
+#choose-courses {
+  max-width: 90%;
+  margin: auto;
+}
+@media only screen and (min-width: 80em) {
+  #choose-courses {
+    max-width: 75%;
+  }
+}
+
+.logo {
+  width: 10em;
+  height: 3em;
+}
+
+.hero {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+@media only screen and (min-width: 48em) {
+  .hero {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 6em;
+    margin-bottom: 12em;
+  }
+  .hero__content {
+    width: 55%;
+  }
+}
+@media only screen and (min-width: 48em) and (min-width: 80em) {
+  .hero {
+    max-width: 80%;
+    margin-bottom: 16em;
+  }
+}
+.hero__title {
+  font-size: 40px;
+  line-height: 51px;
+  font-weight: 800;
+  color: #13183f;
+  margin-bottom: 1.6rem;
+}
+@media only screen and (min-width: 48em) {
+  .hero__title {
+    font-size: 56px;
+    line-height: 70px;
+    font-weight: 800;
+  }
+}
+.hero__text {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #83869a;
+  margin-bottom: 1.6rem;
+}
+.hero__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 48em) {
+  .hero__img {
+    position: absolute;
+    top: -16rem;
+    right: -20rem;
+  }
+}
+.hero__img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.courses {
+  display: grid;
+  row-gap: 3rem;
+  margin-bottom: 4em;
+}
+@media only screen and (min-width: 48em) {
+  .courses {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .courses {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.courses-presentation-card {
+  background: linear-gradient(90deg, #f02aa6, #ff6f48);
+  color: #fff;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 800;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.courses-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background-color: #fff;
+  padding: 3em 1em;
+  height: 18em;
+  margin: auto;
+  border-radius: 10px;
+  width: 100%;
+}
+.courses-card__title {
+  font-size: 1.6rem;
+  line-height: 25.2px;
+  font-weight: 800;
+  color: #13183f;
+}
+.courses-card__text {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #83869a;
+}
+.courses-card::before {
+  content: url("../assets/icon-animation.svg");
+  position: absolute;
+  top: -30px;
+  left: 25px;
+}
+
+.courses-card:nth-child(2)::before {
+  content: url("../assets/icon-animation.svg");
+}
+
+.courses-card:nth-child(3)::before {
+  content: url("../assets/icon-design.svg");
+}
+
+.courses-card:nth-child(4)::before {
+  content: url("../assets/icon-photography.svg");
+}
+
+.courses-card:nth-child(5)::before {
+  content: url("../assets/icon-crypto.svg");
+}
+
+.courses-card:nth-child(6)::before {
+  content: url("../assets/icon-business.svg");
+}
+
+.btn {
+  display: inline-block;
+  font-style: 16px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #13183f;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  border-radius: calc(28px + 0.4em);
+}
+.btn:hover {
+  opacity: 0.7;
+}
+.btn--grad1 {
+  background: linear-gradient(90deg, #f02aa6, #ff6f48);
+}
+.btn--grad2 {
+  background: linear-gradient(90deg, #4851ff, #f02aa6);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,283 @@
+// ----------------------------------
+//              BASE
+// ----------------------------------
+// Typography
+@mixin h-xl { //Heading Extra Large
+    font-size: 56px;
+    line-height: 70px;
+    font-weight: 800;
+}
+
+@mixin h-l { //Heading Large
+    font-size: 40px;
+    line-height: 51px;
+    font-weight: 800;
+}
+
+@mixin h-m { //Heading Medium
+    font-size: 32px;
+    line-height: 70px;
+    font-weight: 800;
+}
+
+@mixin h-s { //Heading Small
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 800;
+}
+
+@mixin b-m {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+@mixin b-s {
+    font-style: 16px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+
+// Colors
+$lightpurple: #666ca3;
+$darkblue: #13183f;
+$gray: #83869a;
+$hotpink: #f74780;
+$lightpink: #ffa7c3;
+$white: #fff;
+$grad1: linear-gradient(90deg, #f02aa6, #ff6f48);
+$grad2: linear-gradient(90deg, #4851ff, #f02aa6);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    // DEFAULT FONT STYLE
+    font-family:'Plus Jakarta Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: $hotpink;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    &:hover {
+        opacity: .7;
+    }
+}
+// ----------------------------------
+//              LAYOUT
+// ----------------------------------
+
+body {
+    background-color: #ffffff;
+    background-image: linear-gradient(176deg, #ffffff 0%, #fbf6fd 98%);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin: 1.5rem auto 2.5rem auto;
+
+    @media only screen and (min-width: 80em) {
+        max-width: 80%;
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    background-color:$darkblue;
+    padding: 2rem 0;
+
+    & .footer-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+
+        @media only screen and (min-width: 80em) {
+            width: 80%;
+        }
+    }
+}
+
+#choose-courses {
+    max-width: 90%;
+    margin: auto;
+
+    @media only screen and (min-width: 80em) {
+        max-width: 75%;
+    }
+}
+
+// ----------------------------------
+//              MODULES
+// ----------------------------------
+.logo {
+    // width: 6em;
+    // height: 2em;
+    width: 10em;
+    height: 3em;
+
+    // @media only screen and (min-width: 48em) {
+    //     width: 10em;
+    //     height: 3em;
+    // }
+}
+
+.hero {
+    position: relative;
+    width: 90%;
+    margin: auto;
+
+    @media only screen and (min-width: 48em) {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 6em;
+        margin-bottom: 12em;
+
+        &__content {
+            width: 55%;
+        }
+
+    @media only screen and (min-width: 80em) {
+        max-width: 80%;
+        margin-bottom: 16em;
+    }
+    }
+
+    &__title {
+        @include h-l;
+        color: $darkblue;
+        margin-bottom: 1.6rem;
+
+        @media only screen and (min-width: 48em) {
+            @include h-xl;
+        }
+    }
+
+    &__text {
+        @include b-m;
+        color: $gray;
+        margin-bottom: 1.6rem;
+    }
+
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (min-width: 48em) {
+            position: absolute;
+            top: -16rem;
+            right: -20rem;
+        }
+
+        & img {
+            width: 100%;
+            object-fit: cover; 
+        }
+    }
+}
+
+//Cards & Cards-grid
+.courses {
+    display: grid;
+    row-gap: 3rem;
+    margin-bottom: 4em;
+
+    @media only screen and (min-width: 48em) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+    }
+
+    @media only screen and (min-width: 62em) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.courses-presentation-card {
+    background: $grad1;   
+    color: $white;
+    @include h-s;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.courses-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    background-color: $white;
+    padding: 3em 1em;
+    height: 18em;
+    margin: auto;
+    border-radius: 10px;
+    width: 100%;
+
+    &__title {
+        font-size: 1.6rem;
+        line-height: 25.2px;
+        font-weight: 800;
+        color: $darkblue;
+    }
+
+    &__text {
+        @include b-m;
+        color: $gray;
+    }
+
+    &::before {
+        content: url('../assets/icon-animation.svg');
+        position: absolute;
+        top: -30px;
+        left: 25px;
+    }
+}
+
+//SETTING CARD ICONS 
+$urls: (
+     2: url('../assets/icon-animation.svg'),
+     3: url('../assets/icon-design.svg'),
+     4: url('../assets/icon-photography.svg'),
+     5: url('../assets/icon-crypto.svg'),
+     6: url('../assets/icon-business.svg')
+);
+
+@for $i from 2 through 6 {
+    .courses-card:nth-child(#{$i})::before {
+        content: map-get($urls, $i)
+    } 
+}
+
+// Buttons
+.btn {
+    display: inline-block;
+    @include b-s;
+    color: $white;
+    background-color: #13183f;
+    padding: .6em 1.2em;
+    cursor: pointer;
+    border-radius: calc(28px + .4em);
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &--grad1 {
+        background: $grad1;
+    }
+
+    &--grad2 {
+        background: $grad2;
+    }
+}

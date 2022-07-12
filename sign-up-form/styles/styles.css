@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: hsl(0deg, 100%, 74%);
+  background-image: url("../images/bg-intro-mobile.png");
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.flex__head {
+  margin-bottom: 3rem;
+}
+@media only screen and (min-width: 67.5em) {
+  .flex {
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .flex__head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex__body {
+    width: 100%;
+  }
+}
+
+.h-2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0.29px;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 67.5em) {
+  .h-2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+}
+
+.text {
+  line-height: 26px;
+  text-align: center;
+  color: white;
+}
+@media screen and (min-width: 67.5em) {
+  .text {
+    text-align: left;
+  }
+}
+
+.text-sm {
+  font-size: 0.9rem;
+  color: hsl(246deg, 25%, 77%);
+  font-weight: 400;
+  text-align: center;
+}
+
+.offer {
+  padding: 1rem 3rem;
+  background-color: hsl(248deg, 32%, 49%);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 13px 5px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.offer .text {
+  text-align: center;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem 0;
+}
+
+.form {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form__input {
+  min-height: 3.6rem;
+  border: 0.75px solid gray;
+  border-radius: 5px;
+  padding-left: 1rem;
+}
+.form__input::placeholder {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: hsl(249deg, 10%, 26%);
+}
+.form__input:focus {
+  outline: 1px solid hsl(248deg, 32%, 49%);
+}
+.form__input:focus:invalid {
+  border: 2px solid red;
+}
+
+.btn {
+  background-color: hsl(154deg, 59%, 51%);
+  color: white;
+  border: none;
+  min-height: 4rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: hsl(154deg, 50%, 51%) 0px 6px 0px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.8s;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+.accent {
+  color: hsl(0deg, 100%, 74%);
+}
+
+/*# sourceMappingURL=styles.css.map */

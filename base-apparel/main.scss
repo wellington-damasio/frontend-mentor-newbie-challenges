@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+// Colors
+$grad-pink: linear-gradient(135deg, #F8BFBF 0%, #EE8B8B 100%);
+$black: #423A3A;
+$light-brown: #CE9898;
+$pink: #EE8B8B;
+$white: #FFF;
+
+
+body {
+    background-image: url('/images/bg-pattern-desktop.svg');
+    background-size: cover;
+    background-position: bottom right;
+    max-height: 100vh;
+    // overflow: hidden;
+
+    @media only screen and (min-width: 64em) {
+        display: grid;
+        grid-template-columns: 55% 45%;
+        grid-template-rows: repeat(4, 25vh);
+        grid-template-areas: 
+            "header hero"
+            "main-c hero"
+            "main-c hero"
+            "main-c hero"
+            "main-c hero";
+    }
+
+    @media only screen and (min-width: 80em) {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 70% 30%;
+    }
+}
+
+img {
+    display: block;
+}
+
+header {
+    padding: 3rem 2rem;
+
+    @media only screen and (min-width: 64em) {
+        grid-area: header;
+        padding: 4rem 6rem;
+
+        .logo {
+            width: 12rem;
+
+            @media only screen and (min-width: 80em) {
+                width: 18rem;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 80em) {
+        // padding: 4rem 10rem;
+        justify-self: center;
+    }
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media only screen and (min-width: 64em) {
+        grid-area: hero;
+    }
+}
+
+#content {
+    margin: 0 auto;
+    padding-bottom: 2rem;
+
+    @media only screen and (min-width: 64em) {
+        grid-area: main-c;
+        align-self: center;
+    }
+
+    @media only screen and (min-width: 80em) {
+        min-width: 800px;
+    }
+}
+
+.main-content {
+
+    &__title {
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 42px;
+        letter-spacing: 10.83px;
+
+        &--accent {
+            line-height: 64px;
+            color: $light-brown;
+            font-weight: 300;
+        }
+
+        @media only screen and (min-width: 50em) {
+            font-size: 3.5rem;
+            line-height: 72px;
+            text-align: center;
+        }
+
+        @media only screen and (min-width: 64em) {
+            width: fit-content;
+            margin-inline: auto;
+            text-align: left;
+        }
+
+        @media only screen and (min-width: 80em) {
+            font-size: 5rem;
+        }
+    }
+
+    &__text {
+        color: $light-brown;
+        line-height: 22px;
+        text-align: center;
+        max-width: 90%;
+        margin-inline: auto;
+
+        @media only screen and (min-width: 50em) {
+            font-size: 1.2rem;
+            line-height: 27px;
+        }
+
+        @media only screen and (min-width: 64em) {
+            text-align: left;
+            max-width: 33rem;
+        }
+
+        @media only screen and (min-width: 80em) {
+            width: 90%;
+        }
+    }
+}
+
+.input-container {
+    position: relative;
+    display: block;
+    width: 90%;
+    margin-inline: auto;
+    --padding-block: .75rem;
+    border: 1px solid $light-brown;
+    border-radius: calc(1.1rem + var(--padding-block) * 2);
+    box-shadow: 0 1rem 3rem rgba($black, .175);
+
+    & input[type="email"] {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        padding: var(--padding-block) 1.2rem;
+        border-radius: calc(1.1rem + var(--padding-block) * 2);
+        border: 1px solid $light-brown;
+    
+        &::placeholder {
+            color: $light-brown;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    & button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(25% + 2px);
+        height: calc(100% + 2px);
+        border: none;
+        border-radius: inherit;
+        background: $grad-pink;
+        color: $white;
+        box-shadow: 0 1rem 3rem .4rem rgba($black, .175);
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles/style.css">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="" class="logo">
+  </header>
+
+  <div class="hero mb-5">
+    <picture>
+      <source srcset="images/hero-desktop.jpg" media="(min-width: 50em)">
+      <img src="images/hero-mobile.jpg" class="hero__img">
+    </picture>
+  </div>
+
+  <section id="content">
+    <div class="main-content mb-4">
+      <h1 class="main-content__title mb-4">
+        <span class="main-content__title--accent">WE'RE</span><br>
+        COMMING <br>
+        SOON
+      </h1>
+
+      <p class="main-content__text mb-5">
+        Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+    </div>
+
+    <form action="">
+      <label for="email-inp" class="input-container">
+        <input type="email" id="email-inp" 
+          placeholder="Email Address" required>
+        <button type="submit">
+          <img src="images/icon-arrow.svg" alt="Submit button">
+        </button>
+      </label>
+    </form>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>

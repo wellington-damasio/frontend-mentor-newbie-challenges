@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-color: #0A0C1C;
+  color: #f6f6f6;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1B1937;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 0.4rem;
+  padding-bottom: 1.5rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card__img {
+  position: relative;
+  background-image: url("../images/image-header-mobile.jpg");
+  background-size: cover;
+  min-height: 15rem;
+  border-radius: 0.4rem 0.4rem 0 0;
+  margin-bottom: 3rem;
+}
+.card__img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #AB5CDB;
+  opacity: 0.6;
+  border-radius: inherit;
+}
+@media (min-width: 750px) {
+  .card__img {
+    background-image: url("../images/image-header-desktop.jpg");
+    width: 50%;
+    margin-bottom: 0;
+    border-radius: 0 0.4rem 0.4rem 0;
+    order: 2;
+  }
+}
+.card__body {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  min-height: 10vh;
+  display: grid;
+  place-items: center;
+}
+@media (min-width: 750px) {
+  .card__body {
+    width: 50%;
+    height: 100%;
+    margin-bottom: 0;
+    padding: 0.75rem;
+    order: 1;
+  }
+}
+.card__title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.card__text {
+  color: #d1d1d1;
+  font-size: 1.05rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.card__socialProof {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.card__socialProof__info {
+  text-align: center;
+}
+.card__socialProof__number {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.card__socialProof__text {
+  text-transform: uppercase;
+  color: #d1d1d1;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+@media (min-width: 750px) {
+  .card {
+    flex-direction: row;
+    align-items: stretch;
+    padding-bottom: 0;
+  }
+}
+
+.accent {
+  color: #AB5CDB;
+}
+
+/*# sourceMappingURL=styles.css.map */

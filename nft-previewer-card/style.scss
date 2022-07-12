@@ -1,0 +1,158 @@
+// Colors
+$soft-blue: #8bacd9;
+$cyan: #00fff8;
+$dark-blue: #2e405a;
+$very-dark-blue: #0d192c;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: $very-dark-blue;
+    color: white;
+}
+
+.card {
+    width: 90%;
+    max-width: 350px;
+    margin-inline: auto;
+    background-color: $dark-blue;
+    padding: 1.5rem;
+    border-radius: .6rem;
+
+    &__img-container {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        height: min-content;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover .card__img__icon {
+            opacity: 1;
+        }
+
+        &:hover .card__img__cover {
+            opacity: .7;
+        }
+    }
+
+    &__img__icon {
+        position: absolute;
+        inset: 0;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 250ms ease-in, top 250ms ease-in;
+    }
+
+    &__img__cover {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        inset: 0 0 6% 0;
+        background-color: $cyan;
+        opacity: .7;
+        border-radius: .6rem;
+        opacity: 0;
+        transition: opacity 300ms ease-in;
+    }
+
+    &__img {
+        position: relative;
+        display: block;
+        border-radius: .6rem;
+        margin-bottom: 1.2em;
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        line-height: 27.72px;
+        margin-bottom: 0.3em;
+
+        &:hover {
+            color: $cyan;
+            cursor: pointer;
+        }
+    }
+
+    &__text {
+        color: $soft-blue;
+        font-size: 1.05rem;
+        line-height: 26px;
+        font-weight: 300;
+        margin-bottom: 1em;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: .9rem;
+        line-height: 18.9px;
+        padding-bottom: .8rem;
+        border-bottom: 1.5px solid $soft-blue;
+        margin-bottom: 1rem;
+
+        &__price {
+            display: flex;
+            align-items: center;
+            color: $cyan;
+            font-weight: 600;
+        }
+
+        &__time {
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            color: $soft-blue
+        }
+
+        &__coin-icon,
+        &__time-icon {
+            display: inline-block;
+            margin-right: .3rem;
+        }
+    }
+
+    &__author-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: .9rem;
+        line-height: 18.9px;
+        font-weight: 400;
+        color: $soft-blue;
+
+        &__author-pic {
+            width: 2.3rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            border: 1px solid white;
+        }
+
+        .accent {
+            color: white;
+
+            &:hover {
+                color: $cyan;
+                cursor: pointer
+            }
+        }
+    }
+}
+

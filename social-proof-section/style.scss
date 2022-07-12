@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+img {
+    display: block;
+    height: 100%;
+}
+
+body {
+    background-image: url('/images/bg-pattern-top-mobile.svg'), 
+        url('/images/bg-pattern-bottom-mobile.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+
+    @media only screen and (min-width: 67em) {
+        display: grid;
+        grid-template-columns: 40vw 60vw;
+        grid-template-rows: 45vh 45vh;
+        grid-template-areas: 
+            "main review"
+            "scp   scp";
+
+        background-image: url('/images/bg-pattern-top-desktop.svg'),
+            url('images/bg-pattern-bottom-desktop.svg');
+
+        padding-top: 3.5rem;
+    }
+}
+
+// Colors
+$gray-purple: #f7f2f7;
+$dark-purple: #512051;
+$pink: #ee69a4;
+$yellow: #ef9546;
+$gray: #927b91;
+
+#main {
+    width: 90%;
+    max-width: 700px;
+    margin-top: 5rem;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+
+    @media only screen and (min-width: 67em) {
+        grid-area: main;
+    }
+}
+
+.main__title {
+    font-size: 3rem;
+    line-height: 42px;
+    letter-spacing: -1.43px;
+    font-weight: 700;
+    text-align: center;
+    color: $dark-purple;
+    margin-bottom: 1em;
+
+    @media only screen and (min-width: 67em) {
+        font-size: 4rem;
+        line-height: 52px;
+        margin-bottom: 0.5em;
+    }
+}
+
+.main__desc {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -.63px;
+    text-align: center;
+    color: $gray;
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 90%;
+    max-width: 700px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+
+    @media only screen and (min-width: 67em) {
+        grid-area: review;
+    }
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    background-color: $gray-purple;
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+
+    &__stars {
+        display: flex;
+        gap: .5rem;
+    }
+
+    &__text {
+        color: $dark-purple;
+        font-size: 1.05rem;
+        font-weight: 700;
+        line-height: 15.64px;
+    }
+
+    @media only screen and (min-width: 67em) {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 1.5rem 3rem;
+        gap: 3rem;
+        max-width: 500px;
+        align-self: var(--self-alignment);
+    }
+}
+
+.social-proofs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    max-width: 1700px;
+    margin-inline: auto;
+
+    @media only screen and (min-width: 67em) {
+        grid-area: scp;
+        flex-direction: row;
+        height: 80%;
+    }
+}
+
+.social-proof-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: $dark-purple;
+    border-radius: .5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    min-height: 16rem;
+    // max-width: 24em;
+    margin-inline: auto;
+
+    &__person-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.4rem;
+
+        &__profile-pic {
+            border-radius: 50%;
+            max-height: 3rem;
+            aspect-ratio: 1 / 1;
+        }
+
+        &__profile-name {
+            color: $gray-purple;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.2em;
+        }
+
+        .accent-color {
+            color: $pink;
+            font-weight: 400;
+        }
+    }
+
+    &__text {
+        color: #f7f7f7;
+        font-size: 1.05rem;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: -.3px;
+        // margin: auto;
+    }
+
+    @media only screen and (min-width: 67em) {
+        align-self: var(--self-alignment);
+    }
+}

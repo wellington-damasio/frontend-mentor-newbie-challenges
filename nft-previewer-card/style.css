@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: #0d192c;
+  color: white;
+}
+
+.card {
+  width: 90%;
+  max-width: 350px;
+  margin-inline: auto;
+  background-color: #2e405a;
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+}
+.card__img-container {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: min-content;
+}
+.card__img-container:hover {
+  cursor: pointer;
+}
+.card__img-container:hover .card__img__icon {
+  opacity: 1;
+}
+.card__img-container:hover .card__img__cover {
+  opacity: 0.7;
+}
+.card__img__icon {
+  position: absolute;
+  inset: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 250ms ease-in, top 250ms ease-in;
+}
+.card__img__cover {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0 0 6% 0;
+  background-color: #00fff8;
+  opacity: 0.7;
+  border-radius: 0.6rem;
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+.card__img {
+  position: relative;
+  display: block;
+  border-radius: 0.6rem;
+  margin-bottom: 1.2em;
+  width: 100%;
+}
+.card__title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 27.72px;
+  margin-bottom: 0.3em;
+}
+.card__title:hover {
+  color: #00fff8;
+  cursor: pointer;
+}
+.card__text {
+  color: #8bacd9;
+  font-size: 1.05rem;
+  line-height: 26px;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+.card__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  line-height: 18.9px;
+  padding-bottom: 0.8rem;
+  border-bottom: 1.5px solid #8bacd9;
+  margin-bottom: 1rem;
+}
+.card__info__price {
+  display: flex;
+  align-items: center;
+  color: #00fff8;
+  font-weight: 600;
+}
+.card__info__time {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  color: #8bacd9;
+}
+.card__info__coin-icon, .card__info__time-icon {
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+.card__author-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  line-height: 18.9px;
+  font-weight: 400;
+  color: #8bacd9;
+}
+.card__author-info__author-pic {
+  width: 2.3rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.card__author-info .accent {
+  color: white;
+}
+.card__author-info .accent:hover {
+  color: #00fff8;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

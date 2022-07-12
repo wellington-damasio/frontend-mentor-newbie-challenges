@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="card">
+    <div class="card__img-container">
+      <img 
+        class="card__img"
+        src="images/image-equilibrium.jpg" 
+        alt="Equilibrium NFT image"
+      />
+      <div class="card__img__cover"></div>
+      <img 
+          class="card__img__icon"
+          src="images/icon-view.svg" 
+          alt="Eye (view) Icon"
+      />
+    </div>
+
+    <h3 class="card__title">Equilibrium #3429</h3>
+    <p class="card__text">
+      Our Equilibrium collection promotes balance and calm.
+    </p>
+
+    <div class="card__info">
+      <span class="card__info__price">
+        <img
+          class="card__info__coin-icon" 
+          src="images/icon-ethereum.svg" 
+          alt="Ethereum Icon"
+        />
+        0.041 ETH
+      </span>
+      <span class="card__info__time">
+        <img
+          class="card__info__time-icon" 
+          src="images/icon-clock.svg" 
+          alt="Clock Icon"
+        />
+        3 days left
+      </span>
+    </div>
+
+    <div class="card__author-info">
+      <img
+        class="card__author-info__author-pic" 
+        src="images/image-avatar.png" 
+        alt="Image of the author of the NFT"
+      />
+      <p class="card__author-info__text">
+        Creation of <span class="accent">Jules Wyvern</span>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
